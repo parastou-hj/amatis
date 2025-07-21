@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row col-xl-11 py-3">
+                <div class="col-lg-1">
+                    <a href="#">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="navbar">
+                          <nav class="d-flex">
+                                        <ul class="ps-3 main-nav">
+                                            <li class="sidebar-header">
+                                                <span class="sidebar-title">منو اصلی</span>
+                                                <button class="sidebar-close-btn" aria-label="Close menu">×</button>
+                                            </li>
+                                            <li class="nav-item"><a href="#">صفحه اصلی</a></li>
+                                            <li  class="has-submenu nav-item">
+                                                <a href="#">
+                                                   محصولات
+                                                <!-- <img src="./images/flesh-down.png" alt=""> -->
+                                            </a>
+                                            <div class="sub-menu-content">
+                                                    <div class="sub-menu-items">
+                                                    <div class="sub-menu-item">
+                                                        <a href="#"> نمایندگی</a>
+                                                    </div>
+                                                    <div class="sub-menu-item">
+                                                        <a href="#">کاتالوگ</a>
+                                                    </div>
+                                                    <div class="sub-menu-item">
+                                                        <a href="#">مقالات</a>
+                                                    </div>
+                                                    <div class="sub-menu-item">
+                                                        <a href="#"> درباره ما</a>
+                                                    </div>
+                                                    <div class="sub-menu-item">
+                                                        <a href="#">تماس با ما</a>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                            </li>
+                                            <li class="has-megamenu nav-item">
+                                                <a href="#" class="nav-link">
+                                                کلاس های آموزشی
+                                                <!-- <img src="./images/flesh-down.png" alt=""> -->
+                                            </a>
+                                            <div class="megamenu-container">
+                                                <div class="container">
+                                                    <div class="megamenu-wrapper">
+                                                        <!-- Categories Column -->
+                                                        <div class="megamenu-column categories-column">
+                                                            <h3 class="megamenu-title">دسته‌بندی کلاس‌ها</h3>
+                                                            <ul class="megamenu-list categories-list">
+                                                                <li class="category-item" data-category="painting-classes">
+                                                                    <a href="#">کلاس‌های نقاشی</a>
+                                                                </li>
+                                                                <li class="category-item" data-category="sketching-classes">
+                                                                    <a href="#">کلاس‌های طراحی</a>
+                                                                </li>
+                                                                <li class="category-item" data-category="handicrafts-classes">
+                                                                    <a href="#">هنرهای دستی و تجسمی</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <!-- Subcategories Column (Dynamic) -->
+                                                        <div class="megamenu-column subcategories-column">
+                                                            <!-- Painting Classes Subcategories -->
+                                                            <div class="subcategory-content" id="painting-classes">
+                                                                <h3 class="megamenu-title">کلاس‌های نقاشی</h3>
+                                                                <ul class="megamenu-list subcategory-list">
+                                                                    <li><a href="#">نقاشی با رنگ روغن</a></li>
+                                                                    <li><a href="#">نقاشی آبرنگ</a></li>
+                                                                    <li><a href="#">نقاشی اکریلیک</a></li>
+                                                                </ul>
+                                                                <a href="#" class="view-all-link">مشاهده همه کلاس‌های نقاشی <i class="fa fa-angle-left"></i></a>
+                                                            </div>
+
+                                                            <!-- Sketching Classes Subcategories -->
+                                                            <div class="subcategory-content" id="sketching-classes">
+                                                                <h3 class="megamenu-title">کلاس‌های طراحی</h3>
+                                                                <ul class="megamenu-list subcategory-list">
+                                                                    <li><a href="#">طراحی با مداد</a></li>
+                                                                    <li><a href="#">طراحی چهره</a></li>
+                                                                    <li><a href="#">اسکیس و پرسپکتیو</a></li>
+                                                                </ul>
+                                                                <a href="#" class="view-all-link">مشاهده همه کلاس‌های طراحی <i class="fa fa-angle-left"></i></a>
+                                                            </div>
+
+                                                            <!-- Handicrafts Classes Subcategories -->
+                                                            <div class="subcategory-content" id="handicrafts-classes">
+                                                                <h3 class="megamenu-title">هنرهای دستی و تجسمی</h3>
+                                                                <ul class="megamenu-list subcategory-list">
+                                                                    <li><a href="#">ساخت مجسمه و حجم</a></li>
+                                                                    <li><a href="#">کلاژ و هنر کاغذی</a></li>
+                                                                    <li><a href="#">نقاشی روی شیشه و سرامیک</a></li>
+                                                                </ul>
+                                                                <a href="#" class="view-all-link">مشاهده همه هنرهای دستی و تجسمی <i class="fa fa-angle-left"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            </li>
+                                            <li class="nav-item has-submenu">
+                                                <a href="#">آرشیو آثار</a>
+                                                
+                                            
+                                            </li>
+                                            <li class="nav-item"><a href="#">نمایشگاه و مسابقات</a></li>
+                                            <li class="nav-item"><a href="#">اخبار</a></li>
+                                            <li class="nav-item"><a href="#">تماس با ما</a></li>
+                                        
+                                        </ul>
+                            </nav>
+                    <div class="lang">
+
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header-last d-flex align-items-center">
+                        <div class="search">
+                            <img src="./images/search.png" alt="">
+                        </div>
+                        <div class="cart">
+                            <img src="./images/cart.png" alt="">
+                        </div>
+                        <div class="user">
+                            <img src="./images/user.png" alt="">
+                        </div>
+                         <button class="mobile-menu-toggle" aria-label="Open menu">
+    <i class="fa fa-bars"></i> 
+</button>
+
+
+<div class="menu-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fix-txt d-flex flex-column">
+            <a href="">
+                <img src="./images/list.png" alt="">
+                <span>درخواست لیست قیمت</span>
+            </a>
+            <a href="" class="mt-3">
+                <img src="./images/tel.png" alt="">
+                <span>56 868 580 - 021</span>
+            </a>
+            
+        </div>
+    </header>
+    <main class="body-content">
+        <div class="baner-sec position-relative">
+            <div class="fixed-items d-flex flex-column align-items-center">
+                <a href="">
+                    <img src="./images/fix-insta.png" alt="">
+                </a>
+                <a href="">
+                    <img src="./images/fix-linkd.png" alt="">
+                </a>
+                <a href="">
+                    <img src="./images/fix-telg.png" alt="">
+                </a>
+                <a href="">
+                    <img src="./images/fix-yutub.png" alt="">
+                </a>
+                <a href="">
+                    <img src="./images/fix-whats.png" alt="">
+                </a>
+                <div class="fix-break"></div>
+                <span>همراه ما باشید</span>
+            </div>
+            <div class="owl-carousel owl-theme" id="baner-owl">
+                <div class="baner-item">
+                    <img src="./images/baner1.png" alt="">
+                    <div class="baner-txt">
+                        <span>AMATIS SHOW ROOM</span>
+                    </div>
+                     <div class=" baner-view-more">
+                    <a href="" class="d-flex align-items-center">
+                            <button class="more-btn">
+                        <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <span class="btn-label me-2">مشاهده محصولات</span>
+                    </a>
+                
+                     </div>
+                   
+                </div>
+                <div class="baner-item">
+                    <img src="./images/baner2.png" alt="">
+                     <div class="baner-txt">
+                        <span>AMATIS SHOW ROOM</span>
+                    </div>
+                     <div class=" baner-view-more">
+                       <a href="" class="d-flex align-items-center">
+                         <button class="more-btn">
+                        <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <span class="btn-label me-2">مشاهده محصولات</span>
+                       </a>
+                
+                     </div>
+                   
+                </div>
+            </div>
+        </div>
+        <section class="products-sec container-fluid my-5 py-5">
+          <div class="row col-xl-11">
+              <div class="owl-carousel owl-theme" id="products-owl">
+                <div class="product-item">
+                    <div class="product-image">
+                        <img class="pro-img" src="./images/pro-1.png" alt="">
+                        <img src="./images/pro-shadow.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>کابینت روشویی</h1>
+                        <h4>سری مدرن</h4>
+                    </div>
+                </div>
+                  <div class="product-item">
+                    <div class="product-image">
+                        <img class="pro-img" src="./images/pro-2.png" alt="">
+                        <img src="./images/pro-shadow.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>کابینت روشویی</h1>
+                        <h4>سری مدرن</h4>
+                    </div>
+                </div>
+                  <div class="product-item">
+                    <div class="product-image">
+                        <img class="pro-img" src="./images/pro-3.png" alt="">
+                        <img src="./images/pro-shadow.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>کابینت روشویی</h1>
+                        <h4>سری مدرن</h4>
+                    </div>
+                </div>
+                  <div class="product-item">
+                    <div class="product-image">
+                        <img class="pro-img" src="./images/pro-4.png" alt="">
+                        <img src="./images/pro-shadow.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>کابینت روشویی</h1>
+                        <h4>سری مدرن</h4>
+                    </div>
+                </div>
+                  <div class="product-item">
+                    <div class="product-image">
+                        <img class="pro-img" src="./images/pro-5.png" alt="">
+                        <img src="./images/pro-shadow.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>کابینت روشویی</h1>
+                        <h4>سری مدرن</h4>
+                    </div>
+                </div>
+                  <div class="product-item">
+                    <div class="product-image">
+                        <img class="pro-img" src="./images/pro-6.png" alt="">
+                        <img src="./images/pro-shadow.png" alt="">
+                    </div>
+                    <div class="product-txt">
+                        <h1>کابینت روشویی</h1>
+                        <h4>سری مدرن</h4>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+        <section class="baner-two ">
+            <div class="">
+               <div class="owl-carousel owl-theme" id="baner-owl-two">
+                 <div class="baner-item-two">
+                    <img src="./images/baner-two.png" alt="">
+                </div>
+                 <div class="baner-item-two">
+                    <img src="./images/baner-two.png" alt="">
+                </div>
+               </div>
+            </div>
+
+        </section>
+        <section class="last-products container-fluid my-5">
+            <div class="row col-xl-11">
+                 <div class="section-header d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="section-subtitle"> محصولات</p>
+                    <h2>آخرین محصولات آماتیس</h2>
+
+                </div>
+                <div class="d-flex align-items-center">
+                    <button class="more-btn">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                    <span class="btn-label me-2">مشاهده همه آرشیو</span>
+                
+                </div>
+            </div>
+            <div class="owl-carousel owl-theme mt-4" id="new-pro-owl">
+              <div class="new-pro-card p-3 ">
+                  <div class="new-pro-item position-relative">
+                     <div class="new-pro-back"></div>
+                    <div class="new-pro-img">
+                        <img src="./images/last-p1.png" alt="">
+                    </div>
+                    <div class="new-pro-txt">
+                        <h1>روشویی کابینتی کاکتوس</h1>
+                        <h6>مدل Bita 75 کد 7024</h6>
+                        <a href="" class="new-more-info" >
+                            اطلاعات بیشتر
+                        </a>
+                    </div>
+                </div>
+               
+              </div>
+               <div class="new-pro-card p-3 ">
+                  <div class="new-pro-item position-relative">
+                     <div class="new-pro-back"></div>
+                    <div class="new-pro-img">
+                        <img src="./images/last-p2.png" alt="">
+                    </div>
+                    <div class="new-pro-txt">
+                        <h1>روشویی کابینتی کاکتوس</h1>
+                        <h6>مدل Bita 75 کد 7024</h6>
+                        <a href="" class="new-more-info" >
+                            اطلاعات بیشتر
+                        </a>
+                    </div>
+                </div>
+               
+              </div>
+               <div class="new-pro-card p-3 ">
+                  <div class="new-pro-item position-relative">
+                     <div class="new-pro-back"></div>
+                    <div class="new-pro-img">
+                        <img src="./images/last-p3.png" alt="">
+                    </div>
+                    <div class="new-pro-txt">
+                        <h1>روشویی کابینتی کاکتوس</h1>
+                        <h6>مدل Bita 75 کد 7024</h6>
+                        <a href="" class="new-more-info" >
+                            اطلاعات بیشتر
+                        </a>
+                    </div>
+                </div>
+               
+              </div>
+               <div class="new-pro-card p-3 ">
+                  <div class="new-pro-item position-relative">
+                     <div class="new-pro-back"></div>
+                    <div class="new-pro-img">
+                        <img src="./images/last-p4.png" alt="">
+                    </div>
+                    <div class="new-pro-txt">
+                        <h1>روشویی کابینتی کاکتوس</h1>
+                        <h6>مدل Bita 75 کد 7024</h6>
+                        <a href="" class="new-more-info" >
+                            اطلاعات بیشتر
+                        </a>
+                    </div>
+                </div>
+               
+              </div>
+              
+            </div>
+            </div>
+        </section>
+        <section class="map-sec container-fluid position-relative px-0">
+            
+            <div class="row col-xl-11 px-0">
+                <div class="col-lg-4">
+                      <div class="title-sec">
+                        <h3>نمایندگی ها</h3>
+                    </div>
+                </div>
+                 <div class="col-lg-8 map-container">
+                         <img src="./images/map.png" alt="">
+                         <div class="map-point sem" 
+                            data-city="سمنان" 
+                            data-projects="15">
+                        </div>
+                         <div class="map-point teh" 
+                            data-city="کهک" 
+                            data-projects="15">
+                        </div>
+                        <div class="map-point zanjan" 
+                            data-city="زنجان" 
+                            data-projects="15">
+                        </div>
+                        <div class="map-point kordestan" 
+                            data-city="کردستان" 
+                            data-projects="15">
+                        </div>
+                         <div class="map-point razavi" 
+                            data-city=" رضوی" 
+                            data-projects="15">
+                        </div>
+                        <div class="map-point khorasan" 
+                            data-city="خراسان جنوبی" 
+                            data-projects="15">
+                        </div>
+                         <div class="map-point yazd" 
+                            data-city="یزد" 
+                            data-projects="15">
+                        </div>
+                         <div class="map-point esf" 
+                            data-city="اصفهان" 
+                            data-projects="15">
+                        </div>
+                        <div class="map-point hamedan" 
+                            data-city="همدان" 
+                            data-projects="15">
+                        </div>
+                          <div class="map-point lorestan" 
+                            data-city="لرستان" 
+                            data-projects="15">
+                        </div>
+                        <div class="map-point kermanshah" 
+                            data-city="کرمانشاه" 
+                            data-projects="15">
+                        </div>
+                         <div class="map-point khozestan" 
+                            data-city="خوزستان" 
+                            data-projects="15">
+                        </div>
+                         <div class="map-point booshehr" 
+                            data-city="بوشهر" 
+                            data-projects="15">
+                        </div>
+                        <div class="map-point booshehr-2" 
+                            data-city="بوشهر" 
+                            data-projects="15">
+                        </div>
+                        <div class="map-point fars" 
+                            data-city="فارس" 
+                            data-projects="15">
+                        </div>
+                        <div class="map-point hormoz" 
+                            data-city="هرمز" 
+                            data-projects="15">
+                        </div>
+                          <div class="map-point chabahar" 
+                            data-city="چابهار" 
+                            data-projects="15">
+                        </div>
+                         <div class="map-point pakistan" 
+                            data-city="پاکستان" 
+                            data-projects="15">
+                        </div>
+                          <div class="map-point iraq" 
+                            data-city="عراق" 
+                            data-projects="15">
+                        </div>
+                        <div class="map-point syria" 
+                            data-city="سوریه" 
+                            data-projects="15">
+                        </div>
+                       
+                       
+                    </div>
+            </div>
+        </section>
+          <section class="articles-section mt-lg-5 mb-lg-3 my-2 py-5">
+        <div class="section-content">
+            <div class="">
+                <div class="section-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="section-subtitle">مقالات</p>
+                    <h2 class="section-title">آخرین خواندنی های آماتیس</h2>
+                    </div>
+                  <div class="d-flex align-items-center">
+                    <button class="nav-btn">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <span class="btn-label me-2">مشاهده همه آرشیو</span>
+                    
+                  </div>
+                </div>
+                
+                <div class="owl-carousel articles-carousel">
+                    <div class="article-card">
+                        <a href="#">
+                            <img src="./images/blog1.png" alt="نکات مهم در خرید اتصالات لوله" class="article-image">
+                        
+                        <div class="article-content">
+                            <div class="d-flex align-items-center">
+                                <img src="./images/article-flesh.png" alt="">
+                            <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
+                            </div>
+                            <p class="article-excerpt">در هنگام خرید اتصالات لوله باید به نکات مهمی توجه شود که کیفیت و دوام محصول را تضمین کند...</p>
+                            <!-- <div class="article-meta">
+                                <span><i class="fa fa-calendar3"></i> 15 اردیبهشت 1403</span>
+                                <span><i class="fa fa-clock"></i> 5 دقیقه مطالعه</span>
+                            </div> -->
+                        </div>
+                        </a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <a href="#">
+                            <img src="./images/blog2.png" alt="معرفی انواع اتصالات لوله" class="article-image">
+                        
+                        <div class="article-content">
+                            <div class="d-flex align-items-center">
+                                <img src="./images/article-flesh.png" alt="">
+                            <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
+                            </div>
+                            <p class="article-excerpt">انواع مختلف اتصالات لوله در صنعت تصفیه آب کاربردهای متفاوتی دارند که در این مقاله به آنها می‌پردازیم...</p>
+                            <!-- <div class="article-meta">
+                                <span><i class="fa fa-calendar3"></i> 12 اردیبهشت 1403</span>
+                                <span><i class="fa fa-clock"></i> 7 دقیقه مطالعه</span>
+                            </div> -->
+                        </div>
+                        </a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <a href="#">
+                            <img src="./images/blog3.png" alt="فیلتر ممبران تصفیه آب بلومن" class="article-image">
+                        
+                        <div class="article-content">
+                            <div class="d-flex align-items-center">
+                                <img src="./images/article-flesh.png" alt="">
+                            <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
+                            </div>
+                            <p class="article-excerpt">فیلترهای ممبران از مهمترین اجزای دستگاه تصفیه آب هستند که نقش حیاتی در فرآیند تصفیه دارند...</p>
+                            <!-- <div class="article-meta">
+                                <span><i class="fa fa-calendar3"></i> 10 اردیبهشت 1403</span>
+                                <span><i class="fa fa-clock"></i> 6 دقیقه مطالعه</span>
+                            </div> -->
+                        </div>
+                        </a>
+                    </div>
+                    
+                    <div class="article-card">
+                       <a href="#">
+                        <img src="./images/blog4.png" alt="رسوب پساب فاضلاب بلومن" class="article-image">
+                        
+                        <div class="article-content">
+                            <div class="d-flex align-items-center">
+                                <img src="./images/article-flesh.png" alt="">
+                            <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
+                            </div>
+                            <p class="article-excerpt">مدیریت و کنترل رسوبات در سیستم‌های فاضلاب از چالش‌های مهم صنعت تصفیه آب محسوب می‌شود...</p>
+                            <!-- <div class="article-meta">
+                                <span><i class="fa fa-calendar3"></i> 8 اردیبهشت 1403</span>
+                                <span><i class="fa fa-clock"></i> 8 دقیقه مطالعه</span>
+                            </div> -->
+                        </div>
+                       </a>
+                    </div>
+                </div>
+                
+                <div class="carousel-navigation">
+                    <button class="carousel-nav-btn carousel-prev">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                    <button class="carousel-nav-btn carousel-next">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="services-section mb-3 pt-3">
+        <div class="container-fluid px-0">
+            <div class="row col-xl-11 px-0">
+               <div class="d-flex align-items-center justify-content-between d-md-block px-4 px-lg-0">
+
+                <div class="section-header text-center">
+                    <h2 class="section-title">با ما بی نظیر شوید</h2>
+                    <div class="d-flex align-items-center justify-content-center mt-3">
+                        <button class="nav-btn">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <span class="btn-label me-2">دانلود کاتالوگ محصولات</span>
+                        
+                    </div>
+                </div>
+               </div>
+            
+            <!-- Desktop Grid -->
+                <div class="services-grid mt-2 mt-lg-0">
+                    
+                    
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <img src="./images/ad1.png" alt="">
+                        </div>
+                        <div class="service-title"> 2 سال گارانتی محصول</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <img src="./images/ad2.png" alt="">
+                        </div>
+                        <div class="service-title"> مشاوره</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">
+                        <img src="./images/ad3.png" alt="">
+                        </div>
+                        <div class="service-title"> ارسال رایگان</div>
+                    </div>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <img src="./images/ad4.png" alt="">
+                        </div>
+                        <div class="service-title">قیمت مطلوب و با کیفیت</div>
+                    </div>
+                     <div class="service-item">
+                        <div class="service-icon">
+                            <img src="./images/ad5.png" alt="">
+                        </div>
+                        <div class="service-title">تنوع محصول</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    </main>
+      <footer class="footer-section ">
+        <div class="container-fluid py-5 position-relative">
+           <div class="row col-xl-11">
+            <div class="col-lg-3">
+                <div class="footer-logo">
+                    <a href="">
+                        <img src="./images/footer-logo.png" alt="">
+                    </a>
+                     <div class="social-column">
+                        <h3>همراه ما باشید!</h3>
+                        <div class="social-links">
+                            <a href="#" title="WhatsApp"><img src="./images/footer-whats.png" alt=""></a>
+                            <a href="#" title="YouTube"><img src="./images/footer-yutub.png" alt=""></a>
+                            <a href="#" title="Telegram"><img src="./images/footer-telg.png" alt=""></a>
+                            <a href="#" title="LinkedIn"><img src="./images/footer-linkd.png" alt=""></a>
+                            <a href="#" title="Instagram"><img src="./images/footer-insta.png" alt=""></a>
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-6 footer-content">
+                <div class="footer-column">
+                    <h3>چرا آماتیس</h3>
+                    <ul>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#"> محصولات</a></li>
+                        <li><a href="#">شرایط و قوانین</a></li>
+                        <li><a href="#">فرصت های شغلی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>دسترسی سریع </h3>
+                    <ul>
+                        <li><a href="#"> تماس با ما</a></li>
+                        <li><a href="#"> اخبار و مقالات</a></li>
+                        <li><a href="#">سوالات متداول</a></li>
+                        <li><a href="#"> دانلود کاتالوگ</a></li>
+                        <li><a href="#"> درخواست نمایندگی</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-column large">
+                    <div class="contact-column">
+                        <h3>تماس با ما</h3>
+                       <div class="d-flex">
+                         <div class="location-icon d-flex flex-column justify-content-around">
+                            <img src="./images/headphone.png" alt="">
+                            <img src="./images/location.png" alt="">
+                        </div>
+                        <div class="contact-info pe-1">
+                            <p>۷ روز هفته از ساعت ۹ الی ۲۰</p>
+                            <p>تلفن پشتیبانی:</p>
+                            <div class="phone-numbers">
+                                860 200 36 -031 | 64 29 20 36 -031
+                            </div>
+                            <p>آدرس:</p>
+                            <p>اصفهان،اتوبان خیام، بعد از بوستان فرشتگان، بن بست 22، ساختمان ستایش</p>
+                            
+                        </div>
+                       </div>
+                    </div>
+                </div>
+
+
+                <!-- همراه ما باشید Column -->
+                <div class="footer-column large">
+                   
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="e-namads">
+                    <a href="">
+                        <img src="./images/e-1.png" alt="">
+                    </a>
+                     <a href="">
+                        <img src="./images/e-2.png" alt="">
+                    </a>
+                </div>
+            </div>
+           </div>
+           <!-- Back to Top Button -->
+        <div class="back-to-top" onclick="scrollToTop()">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+        </div>
+       
+    
+    <!-- Copyright Bar -->
+    <div class="copyright-bar">
+        <div class="container">
+            <p>© کلیه حقوق این سایت متعلق به شرکت <a href="#">بلو من</a> می باشد.</p>
+        </div>
+    </div>
+    </footer>
+    
+
+
+
+
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
