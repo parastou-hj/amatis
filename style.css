@@ -294,7 +294,7 @@ header{
     text-decoration: none;
     transition: all 0.3s ease;
     display: block;
-    padding: 5px 0;
+    padding: 8px 0;
     position: relative;
     padding-right: 15px;
 }
@@ -636,32 +636,38 @@ body.no-scroll {
     }
 }
 
-.header-last > img{
-    /* width: 22px; */
+.header-last > div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user-menu {
     position: absolute;
     top: 100%;
-    left: -20px;
+    left: -50px;
     width: 320px;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 107, 53, 0.1);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-15px);
+    transform: translateY(15px);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     z-index: 9999;
     overflow: hidden;
     margin-top: 10px;
 }
 
-.user:hover .user-menu,
-.user-menu:hover {
+ .user-menu.active
+{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+.user{
+    cursor: pointer;
 }
 
 
@@ -864,7 +870,7 @@ body.no-scroll {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 107, 53, 0.1) !important;
     opacity: 0 ;
     visibility: hidden ;
-    transform: translateY(-15px) ;
+    transform: translateY(15px) ;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) ;
     z-index: 9999 ;
     overflow: hidden ;
@@ -1456,184 +1462,42 @@ transition: all .3s ease;
             color: #000;
         }
         /* استایل‌های پاپ آپ نمایندگی */
-.dealer-popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 10006;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(3px);
-}
 
-.dealer-popup-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.dealer-popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    max-width: 500px;
-    width: 90%;
-    max-height: 90vh;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.dealer-popup-overlay.active .dealer-popup {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.dealer-popup-header {
-    background: linear-gradient(135deg, var(--primary-color), #DC2626);
-    color: white;
-    padding: 25px;
-    text-align: center;
-    position: relative;
-}
-
-.dealer-popup-close {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.dealer-popup-close:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: rotate(90deg);
-}
-
-.dealer-popup .city-name {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.city-subtitle {
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-.dealer-popup-body {
-    padding: 30px;
-}
-
-.dealer-info-section {
-    margin-bottom: 25px;
-}
-
-.dealer-info-section:last-child {
-    margin-bottom: 0;
-}
-
-.dealer-popup .section-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 12px;
-    padding: 10px;
-    background: #f8f9fa;
-    border-radius: 8px;
-}
-
-.info-item:last-child {
-    margin-bottom: 0;
-}
-
-.info-icon {
-    color: var(--primary-color);
-    font-size: 16px;
-    margin-top: 2px;
-    min-width: 20px;
-}
-
-.info-content {
-    flex: 1;
-}
-
-.info-label {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 2px;
-}
-
-.info-value {
-    font-size: 14px;
-    color: #333;
-    font-weight: 500;
-    line-height: 1.4;
-}
-
-.dealer-contact-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.contact-btn {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.contact-btn.primary {
-    background: var(--primary-color);
-    color: white;
-}
-
-.contact-btn.primary:hover {
-    background: var(--blue);
-    transform: translateY(-2px);
-}
-
-.contact-btn.secondary {
-    background: #f1f5f9;
-    color: #334155;
-    border: 1px solid #e2e8f0;
-}
-
-.contact-btn.secondary:hover {
-    background: #e2e8f0;
-}
-
+ .dealer-popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10006; display: none; align-items: center; justify-content: center; }
+        .dealer-popup { background: white; border-radius: 20px; max-width: 600px; width: 90%; max-height: 90vh; overflow: hidden; }
+        .dealer-popup-header { background: linear-gradient(135deg, var(--primary-color), #502f2f); color: white; padding: 25px; text-align: center; position: relative; }
+        .dealer-popup-close { position: absolute; top: 15px; left: 15px; background: rgba(255,255,255,0.2); border: none; color: white; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; }
+        .city-name { font-size: 24px; font-weight: bold; margin-bottom: 5px; }
+        .city-subtitle { font-size: 14px; opacity: 0.9; }
+        .dealers-count { margin-top: 10px; font-size: 13px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 15px; display: inline-block; }
+        
+        /* Tabs */
+        .dealer-tabs { display: flex; background: #f8f9fa; overflow-x: auto; }
+        .dealer-tab { padding: 15px 20px; background: transparent; border: none; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; font-size: 14px; color: #666; min-width: 150px; }
+        .dealer-tab.active { color: var(--primary-color); border-bottom-color: var(--primary-color); background: rgba(227,42,9,0.05); }
+        
+        /* Content */
+        .dealer-content { padding: 25px; max-height: 400px; overflow-y: auto; }
+        .dealer-panel { display: none; }
+        .dealer-panel.active { display: block; }
+        .dealer-name { font-size: 18px; font-weight: bold; color: var(--primary-color); margin-bottom: 20px; text-align: center; padding-bottom: 10px; border-bottom: 2px solid #eee; }
+        .info-item { display: flex; gap: 12px; margin-bottom: 12px; padding: 12px; background: #f8f9fa; border-radius: 8px; border-right: 4px solid var(--primary-color); }
+        .info-icon { color: var(--primary-color); font-size: 16px; min-width: 20px; }
+        .info-label { font-size: 13px; color: #666; margin-bottom: 2px; }
+        .info-value { font-size: 14px; color: #333; font-weight: 500; }
+        .dealer-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-top: 20px; }
+        .stat-item { text-align: center; padding: 15px; background: linear-gradient(135deg, var(--primary-color), #502f2f); color: white; border-radius: 10px; }
+        .stat-number { font-size: 18px; font-weight: bold; display: block; }
+        .stat-label { font-size: 12px; opacity: 0.9; margin-top: 5px; }
+        .contact-buttons { display: flex; gap: 10px; margin-top: 20px; }
+        .contact-btn { flex: 1; padding: 12px; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .contact-btn.primary { background: var(--primary-color); color: white; }
+        .contact-btn.secondary { background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
+        
+        /* Navigation */
+        .dealer-navigation { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; padding: 0 10px; display: flex; justify-content: space-between; pointer-events: none; }
+        .nav-arrow { width: 40px; height: 40px; background: var(--primary-color); color: white; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; pointer-events: auto; opacity: 0.8; }
+        .nav-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
 .map-point {
     cursor: pointer !important;
     transition: all 0.3s ease;
@@ -1694,9 +1558,9 @@ transition: all .3s ease;
 }
 
 .map-container img {
-    /* width: 100%;
-    height: auto;
-    display: block; */
+    width: 100%;
+    height: 100%;
+   
 }
 
 .map-point {
