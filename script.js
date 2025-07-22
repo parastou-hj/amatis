@@ -388,134 +388,6 @@ $(document).ready(function(){
    
 
 
-// let currentPhone = '';
-// let currentAddress = '';
-// let currentActivePoint = null;
-
-// // تابع باز کردن پاپ آپ نمایندگی
-// function openDealerPopup(clickedElement) {
-//     const cityName = clickedElement.dataset.city;
-//     const managerName = clickedElement.dataset.manager;
-//     const address = clickedElement.dataset.address;
-//     const phone = clickedElement.dataset.phone;
-
-//     // پر کردن اطلاعات پاپ آپ
-//     document.getElementById('popupCityName').textContent = cityName;
-//     document.getElementById('popupManagerName').textContent = managerName;
-//     document.getElementById('popupAddress').textContent = address;
-//     document.getElementById('popupPhone').textContent = phone;
-
-//     // ذخیره اطلاعات برای استفاده در دکمه‌ها
-//     currentPhone = phone;
-//     currentAddress = address;
-
-//     // نمایش پاپ آپ
-//     document.getElementById('dealerPopupOverlay').classList.add('active');
-//     document.body.style.overflow = 'hidden';
-// }
-
-// // تابع بستن پاپ آپ
-// function closeDealerPopup() {
-//     document.getElementById('dealerPopupOverlay').classList.remove('active');
-//     document.body.style.overflow = 'auto';
-// }
-
-
-
-// // تابع نمایش نقطه روی نقشه
-// function showMapPoint(cityName) {
-//     // پنهان کردن نقطه قبلی
-//     if (currentActivePoint) {
-//         currentActivePoint.classList.remove('active');
-//     }
-    
-//     // پیدا کردن و نمایش نقطه جدید
-//     const mapPoint = document.querySelector(`.map-point[data-city="${cityName}"]`);
-//     if (mapPoint) {
-//         mapPoint.classList.add('active');
-//         currentActivePoint = mapPoint;
-//     }
-// }
-
-// // تابع پنهان کردن نقطه روی نقشه
-// function hideMapPoint() {
-//     if (currentActivePoint) {
-//         currentActivePoint.classList.remove('active');
-//         currentActivePoint = null;
-//     }
-// }
-
-// // تابع highlight کردن دکمه شهر
-// function highlightCityButton(cityName) {
-//     const cityButton = document.querySelector(`.city-btn[data-city="${cityName}"]`);
-//     if (cityButton) {
-//         cityButton.classList.add('highlighted');
-//     }
-// }
-
-// // تابع حذف highlight از دکمه شهر
-// function unhighlightCityButton(cityName) {
-//     const cityButton = document.querySelector(`.city-btn[data-city="${cityName}"]`);
-//     if (cityButton) {
-//         cityButton.classList.remove('highlighted');
-//     }
-// }
-
-// // رویدادهای اصلی
-// document.addEventListener('DOMContentLoaded', function() {
-//     // رویداد hover برای دکمه‌های شهر
-//     const cityButtons = document.querySelectorAll('.city-btn');
-    
-//     cityButtons.forEach(button => {
-//         button.addEventListener('mouseenter', function() {
-//             const cityName = this.dataset.city;
-//             showMapPoint(cityName);
-//         });
-        
-//         button.addEventListener('mouseleave', function() {
-//             hideMapPoint();
-//         });
-        
-//         button.addEventListener('click', function(e) {
-//             e.stopPropagation();
-//             openDealerPopup(this);
-//         });
-//     });
-
-//     // رویداد hover برای نقاط نقشه (اتصال معکوس)
-//     const mapPoints = document.querySelectorAll('.map-point');
-    
-//     mapPoints.forEach(point => {
-//         point.addEventListener('mouseenter', function() {
-//             const cityName = this.dataset.city;
-//             highlightCityButton(cityName);
-//         });
-        
-//         point.addEventListener('mouseleave', function() {
-//             const cityName = this.dataset.city;
-//             unhighlightCityButton(cityName);
-//         });
-        
-//         point.addEventListener('click', function(e) {
-//             e.stopPropagation();
-//             openDealerPopup(this);
-//         });
-//     });
-    
-//     // بستن پاپ آپ با کلیک روی overlay
-//     document.getElementById('dealerPopupOverlay').addEventListener('click', function(e) {
-//         if (e.target === this) {
-//             closeDealerPopup();
-//         }
-//     });
-    
-//     // بستن پاپ آپ با کلید ESC
-//     document.addEventListener('keydown', function(e) {
-//         if (e.key === 'Escape') {
-//             closeDealerPopup();
-//         }
-//     });
-// });
 let currentDealers = [];
 let currentIndex = 0;
 
@@ -528,35 +400,29 @@ function openDealerPopup(button) {
     currentDealers = dealersData;
     currentIndex = 0;
     
-    // بروزرسانی عنوان
     document.getElementById('cityName').textContent = cityName;
     // document.getElementById('dealersCount').textContent = `${dealersCount} نمایندگی فعال`;
     
-    // مدیریت تب‌ها و ناوبری
     const tabsContainer = document.getElementById('dealerTabs');
-    const navigation = document.getElementById('dealerNavigation');
+ 
     
     if (dealersCount > 1) {
         tabsContainer.style.display = 'flex';
-        navigation.style.display = 'flex';
+     
         createTabs();
     } else {
         tabsContainer.style.display = 'none';
-        navigation.style.display = 'none';
+       
     }
     
-    // ایجاد پنل‌ها
     createPanels();
     
-    // نمایش پاپ‌آپ
     document.getElementById('dealerPopup').style.display = 'flex';
     document.body.style.overflow = 'hidden';
     
-    // فعال‌سازی اولین نمایندگی
     switchDealer(0);
 }
 
-// ایجاد تب‌ها
 function createTabs() {
     const tabsContainer = document.getElementById('dealerTabs');
     tabsContainer.innerHTML = '';
@@ -570,7 +436,6 @@ function createTabs() {
     });
 }
 
-// ایجاد پنل‌ها
 function createPanels() {
     const panelsContainer = document.getElementById('dealerPanels');
     panelsContainer.innerHTML = '';
@@ -642,15 +507,12 @@ function createPanels() {
     });
 }
 
-// تغییر نمایندگی
 function switchDealer(index) {
     if (index < 0 || index >= currentDealers.length) return;
     
-    // حذف active از همه
     document.querySelectorAll('.dealer-tab').forEach(tab => tab.classList.remove('active'));
     document.querySelectorAll('.dealer-panel').forEach(panel => panel.classList.remove('active'));
     
-    // اضافه کردن active به انتخاب شده
     const targetTab = document.querySelectorAll('.dealer-tab')[index];
     const targetPanel = document.getElementById(`panel-${index}`);
     
@@ -658,49 +520,26 @@ function switchDealer(index) {
     if (targetPanel) targetPanel.classList.add('active');
     
     currentIndex = index;
-    updateNavigation();
+   
 }
 
-// ناوبری قبلی
-function prevDealer() {
-    if (currentIndex > 0) {
-        switchDealer(currentIndex - 1);
-    }
-}
 
-// ناوبری بعدی  
-function nextDealer() {
-    if (currentIndex < currentDealers.length - 1) {
-        switchDealer(currentIndex + 1);
-    }
-}
 
-// بروزرسانی دکمه‌های ناوبری
-function updateNavigation() {
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex === currentDealers.length - 1;
-}
 
-// بستن پاپ‌آپ
+
 function closePopup() {
     document.getElementById('dealerPopup').style.display = 'none';
     document.body.style.overflow = 'auto';
 }
 
-// تماس با نمایندگی
 function callDealer(phone) {
     window.location.href = `tel:${phone}`;
 }
 
-// مسیریابی
 function navigateToDealer(address) {
     window.open(`https://maps.google.com/?q=${encodeURIComponent(address)}`, '_blank');
 }
 
-// اضافه کردن event listener به دکمه‌ها
 document.querySelectorAll('.city-btn').forEach(button => {
     button.addEventListener('click', () => openDealerPopup(button));
 });
@@ -713,6 +552,116 @@ document.addEventListener('keydown', (e) => {
 });
 
 // بستن با کلیک روی overlay
+document.getElementById('dealerPopup').addEventListener('click', (e) => {
+    if (e.target.id === 'dealerPopup') {
+        closePopup();
+    }
+});
+let activeMapPoint = null;
+
+function findMapPointByCity(cityName) {
+    return document.querySelector(`.map-point[data-city="${cityName}"]`);
+}
+
+function findCityButtonByCity(cityName) {
+    return document.querySelector(`.city-btn[data-city="${cityName}"]`);
+}
+
+function highlightMapPoint(cityName) {
+    if (activeMapPoint) {
+        activeMapPoint.classList.remove('highlighted');
+    }
+    
+    const mapPoint = findMapPointByCity(cityName);
+    if (mapPoint) {
+        mapPoint.classList.add('highlighted');
+        activeMapPoint = mapPoint;
+    }
+}
+
+function removeHighlight() {
+    if (activeMapPoint) {
+        activeMapPoint.classList.remove('highlighted');
+        activeMapPoint = null;
+    }
+}
+
+function openDealerPopupFromElement(element) {
+    const cityName = element.dataset.city;
+    
+    const cityButton = findCityButtonByCity(cityName);
+    
+    if (cityButton) {
+        openDealerPopup(cityButton);
+    } else {
+        const dealersData = [{
+            name: "نمایندگی " + cityName,
+            manager: element.dataset.manager || "در حال بروزرسانی",
+            address: element.dataset.address || "آدرس در دسترس نیست",
+            phone: element.dataset.phone || "تلفن در دسترس نیست",
+            hours: element.dataset.workhours || "ساعات کاری در دسترس نیست",
+            // projects: element.dataset.projects || "0",
+            // customers: element.dataset.customers || "0"
+        }];
+        
+        currentDealers = dealersData;
+        currentIndex = 0;
+        
+        document.getElementById('cityName').textContent = cityName;
+        
+        document.getElementById('dealerTabs').style.display = 'none';
+        
+        createPanels();
+        
+        document.getElementById('dealerPopup').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+        
+        switchDealer(0);
+    }
+}
+
+document.querySelectorAll('.city-btn').forEach(button => {
+    button.addEventListener('click', () => openDealerPopup(button));
+    
+    button.addEventListener('mouseenter', () => {
+        const cityName = button.dataset.city;
+        highlightMapPoint(cityName);
+    });
+    
+    button.addEventListener('mouseleave', () => {
+        removeHighlight();
+    });
+});
+
+document.querySelectorAll('.map-point').forEach(point => {
+    point.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openDealerPopupFromElement(point);
+    });
+    
+    point.addEventListener('mouseenter', () => {
+        const cityName = point.dataset.city;
+        const cityButton = findCityButtonByCity(cityName);
+        if (cityButton) {
+            cityButton.classList.add('highlighted');
+        }
+    });
+    
+    point.addEventListener('mouseleave', () => {
+        const cityName = point.dataset.city;
+        const cityButton = findCityButtonByCity(cityName);
+        if (cityButton) {
+            cityButton.classList.remove('highlighted');
+        }
+    });
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closePopup();
+    }
+});
+
 document.getElementById('dealerPopup').addEventListener('click', (e) => {
     if (e.target.id === 'dealerPopup') {
         closePopup();

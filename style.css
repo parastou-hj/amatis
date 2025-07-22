@@ -1280,6 +1280,9 @@ body.no-scroll {
     padding: 30px;
     text-align: center;
 }
+.product-item a{
+    color: #000;
+}
 .product-image{
     height: 200px;
     display: flex;
@@ -1498,6 +1501,46 @@ transition: all .3s ease;
         .dealer-navigation { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; padding: 0 10px; display: flex; justify-content: space-between; pointer-events: none; }
         .nav-arrow { width: 40px; height: 40px; background: var(--primary-color); color: white; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; pointer-events: auto; opacity: 0.8; }
         .nav-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
+
+        /* استایل برای highlight کردن نقاط روی نقشه */
+.map-point.highlighted {
+    background: hsl(51.39deg 98.39% 51.37%) !important; /* رنگ زرد */
+    transform: translate(-50%, -50%) scale(1.8);
+    z-index: 100;
+    animation: highlightPulse 1s infinite ease-in-out;
+}
+
+.map-point.highlighted::before {
+    border-color: hsl(51.39deg 98.39% 51.37%);
+    animation-duration: 0.8s;
+}
+
+.map-point.highlighted::after {
+    border-color: hsl(51.39deg 98.39% 60%);
+    animation-duration: 1.2s;
+}
+
+@keyframes highlightPulse {
+    0% { transform: translate(-50%, -50%) scale(1.8); }
+    50% { transform: translate(-50%, -50%) scale(2.2); }
+    100% { transform: translate(-50%, -50%) scale(1.8); }
+}
+
+.city-btn.highlighted {
+    background: var(--third-color) !important;
+    color: #000 !important;
+    border-color: var(--third-color) !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 196, 0, 0.5);
+}
+
+.map-point:active {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.map-point {
+    cursor: pointer;
+}
 .map-point {
     cursor: pointer !important;
     transition: all 0.3s ease;
