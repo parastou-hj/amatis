@@ -643,7 +643,7 @@ body.no-scroll {
 .user-menu {
     position: absolute;
     top: 100%;
-    right: -50px;
+    left: -20px;
     width: 320px;
     background: #ffffff;
     border-radius: 12px;
@@ -654,7 +654,7 @@ body.no-scroll {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     z-index: 9999;
     overflow: hidden;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .user:hover .user-menu,
@@ -664,27 +664,11 @@ body.no-scroll {
     transform: translateY(0);
 }
 
-/* فلش اشاره‌گر */
-.user-menu::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    right: 70px;
-    width: 12px;
-    height: 12px;
-    background: #ffffff;
-    transform: rotate(45deg);
-    border-top: 1px solid rgba(255, 107, 53, 0.1);
-    border-right: 1px solid rgba(255, 107, 53, 0.1);
-    border-bottom: none;
-    border-left: none;
-    z-index: 10000;
-}
 
 
 .user-header {
     display: flex;
-    background: linear-gradient(135deg, var(--primary-color), var(--blue));
+        background: linear-gradient(135deg, var(--primary-color), #502f2f) ;
     color: #ffffff;
     padding: 15px 20px;
     position: relative;
@@ -1779,15 +1763,15 @@ transition: all .3s ease;
             visibility: visible;
             scale: 1.5;
             animation: pointPulse 2s infinite ease-in-out;
-            background: #ff3c00;
+            background: hsl(194, 92%, 42%);
         }
 .map-point.active::before {
-    border-color: #FF8C00;
+    border-color: hsl(194, 56%, 56%);
     animation-duration: 1s;
 }
 
 .map-point.active::after {
-    border-color: #FF8C00;
+    border-color: hsl(194.19deg 51.38% 64.51%);
     animation-duration: 1.5s;
 }
 .map-point:hover::before {
@@ -2564,16 +2548,16 @@ position: absolute;
         
         .social-links {
             display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
+            justify-content: start;
+            /* gap: 10px; */
+            margin-top: 10px;
         }
         
         .social-links a {
             color: #ffffff;
             font-size: 24px;
             transition: all 0.3s ease;
-            opacity: 0.8;
+            /* opacity: 0.8; */
             display: flex;
             align-items: center;
             justify-content: center;
