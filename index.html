@@ -376,7 +376,8 @@
                    </a>
                 </div>
                   <div class="product-item">
-                    <div class="product-image">
+                    <a href="">
+                        <div class="product-image">
                         <img class="pro-img" src="./images/pro-2.png" alt="">
                         <img src="./images/pro-shadow.png" alt="">
                     </div>
@@ -384,6 +385,7 @@
                         <h1>کابینت روشویی</h1>
                         <h4>سری مدرن</h4>
                     </div>
+                    </a>
                 </div>
                   <div class="product-item">
                     <div class="product-image">
@@ -536,9 +538,9 @@
                       
 
                     <div class="filters">
-                          <select class="dropdown">
-                            <option>نام شهر</option>
-                        </select>
+                         <select class="dropdown" id="cityDropdown">
+        <option value="">انتخاب شهر</option>
+    </select>
                         <button class="dropdown filter-submit">
                             <span>نمایندگی</span>
                             <img src="./images/search.png" alt="">
@@ -725,7 +727,7 @@
                <div class="dealer-popup-overlay" id="dealerPopup">
     <div class="dealer-popup">
         <div class="dealer-popup-header">
-            <button class="dealer-popup-close" onclick="closePopup()">
+            <button class="dealer-popup-close">
                 <i class="fas fa-times"></i>
             </button>
             <div class="city-name" id="cityName">نام شهر</div>
@@ -761,78 +763,63 @@
                 </div>
                 
                 <div class="owl-carousel articles-carousel">
-                    <div class="article-card">
-                        <a href="#">
-                            <img src="./images/blog1.png" alt="نکات مهم در خرید اتصالات لوله" class="article-image">
-                        
-                        <div class="article-content">
-                            <div class="d-flex align-items-center article-title-sec">
-                                <img src="./images/article-flesh.png" alt="">
-                            <h3 class="article-title">روشویی مناسب سرویس بهداشتی کوچک</h3>
-                            </div>
-                            <p class="article-excerpt">در هنگام خرید اتصالات لوله باید به نکات مهمی توجه شود که کیفیت و دوام محصول را تضمین کند...</p>
-                            <!-- <div class="article-meta">
-                                <span><i class="fa fa-calendar3"></i> 15 اردیبهشت 1403</span>
-                                <span><i class="fa fa-clock"></i> 5 دقیقه مطالعه</span>
-                            </div> -->
-                        </div>
-                        </a>
-                    </div>
-                    
-                    <div class="article-card">
-                        <a href="#">
-                            <img src="./images/blog2.png" alt="معرفی انواع اتصالات لوله" class="article-image">
-                        
-                        <div class="article-content">
-                            <div class="d-flex align-items-center article-title-sec">
-                                <img src="./images/article-flesh.png" alt="">
-                            <h3 class="article-title">راهنمای خرید آینه سرویس بهداشتی چراغ دار</h3>
-                            </div>
-                            <p class="article-excerpt">انواع مختلف اتصالات لوله در صنعت تصفیه آب کاربردهای متفاوتی دارند که در این مقاله به آنها می‌پردازیم...</p>
-                            <!-- <div class="article-meta">
-                                <span><i class="fa fa-calendar3"></i> 12 اردیبهشت 1403</span>
-                                <span><i class="fa fa-clock"></i> 7 دقیقه مطالعه</span>
-                            </div> -->
-                        </div>
-                        </a>
-                    </div>
-                    
-                    <div class="article-card">
-                        <a href="#">
-                            <img src="./images/blog3.png" alt="فیلتر ممبران تصفیه آب بلومن" class="article-image">
-                        
-                        <div class="article-content">
-                            <div class="d-flex align-items-center article-title-sec">
-                                <img src="./images/article-flesh.png" alt="">
-                            <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
-                            </div>
-                            <p class="article-excerpt">فیلترهای ممبران از مهمترین اجزای دستگاه تصفیه آب هستند که نقش حیاتی در فرآیند تصفیه دارند...</p>
-                            <!-- <div class="article-meta">
-                                <span><i class="fa fa-calendar3"></i> 10 اردیبهشت 1403</span>
-                                <span><i class="fa fa-clock"></i> 6 دقیقه مطالعه</span>
-                            </div> -->
-                        </div>
-                        </a>
-                    </div>
-                    
-                    <div class="article-card">
-                       <a href="#">
-                        <img src="./images/blog4.png" alt="رسوب پساب فاضلاب بلومن" class="article-image">
-                        
-                        <div class="article-content">
-                            <div class="d-flex align-items-center article-title-sec">
-                                <img src="./images/article-flesh.png" alt="">
-                            <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
-                            </div>
-                            <p class="article-excerpt">مدیریت و کنترل رسوبات در سیستم‌های فاضلاب از چالش‌های مهم صنعت تصفیه آب محسوب می‌شود...</p>
-                            <!-- <div class="article-meta">
-                                <span><i class="fa fa-calendar3"></i> 8 اردیبهشت 1403</span>
-                                <span><i class="fa fa-clock"></i> 8 دقیقه مطالعه</span>
-                            </div> -->
-                        </div>
-                       </a>
-                    </div>
+    <div class="article-card">
+        <a href="#">
+            <img src="./images/blog1.png" alt="روشویی مناسب برای فضاهای کوچک" class="article-image">
+
+            <div class="article-content">
+                <div class="d-flex align-items-center article-title-sec">
+                    <img src="./images/article-flesh.png" alt="">
+                    <h3 class="article-title">روشویی مناسب برای سرویس بهداشتی کوچک</h3>
                 </div>
+                <p class="article-excerpt">اگر فضای کوچکی در اختیار دارید، انتخاب مدل مناسب کابینت روشویی می‌تواند باعث افزایش زیبایی و کارایی سرویس بهداشتی شود...</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="article-card">
+        <a href="#">
+            <img src="./images/blog2.png" alt="آینه چراغ‌دار برای سرویس بهداشتی" class="article-image">
+
+            <div class="article-content">
+                <div class="d-flex align-items-center article-title-sec">
+                    <img src="./images/article-flesh.png" alt="">
+                    <h3 class="article-title">راهنمای خرید آینه چراغ‌دار سرویس بهداشتی</h3>
+                </div>
+                <p class="article-excerpt">آینه‌های چراغ‌دار با نور مخفی یا LED، انتخابی مدرن برای فضاهای بهداشتی هستند. در این مقاله به نکات کلیدی خرید آن می‌پردازیم...</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="article-card">
+        <a href="#">
+            <img src="./images/blog3.png" alt="انتخاب رنگ کابینت روشویی" class="article-image">
+
+            <div class="article-content">
+                <div class="d-flex align-items-center article-title-sec">
+                    <img src="./images/article-flesh.png" alt="">
+                    <h3 class="article-title">چگونه رنگ مناسب برای کابینت روشویی انتخاب کنیم؟</h3>
+                </div>
+                <p class="article-excerpt">انتخاب رنگ کابینت روشویی باید با دکوراسیون حمام و سرویس بهداشتی هماهنگ باشد. نکاتی درباره انتخاب رنگ‌های روشن و تیره را بخوانید...</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="article-card">
+        <a href="#">
+            <img src="./images/blog4.png" alt="متریال‌های مقاوم در کابینت روشویی" class="article-image">
+
+            <div class="article-content">
+                <div class="d-flex align-items-center article-title-sec">
+                    <img src="./images/article-flesh.png" alt="">
+                    <h3 class="article-title">آشنایی با متریال‌های مقاوم برای کابینت روشویی</h3>
+                </div>
+                <p class="article-excerpt">در این مقاله متریال‌هایی مثل PVC، MDF ضد آب و های‌گلاس بررسی می‌شوند تا انتخابی بادوام برای محیط‌های مرطوب داشته باشید...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
                 
                 <div class="carousel-navigation">
                     <button class="carousel-nav-btn carousel-prev">

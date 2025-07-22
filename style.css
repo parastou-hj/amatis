@@ -1504,13 +1504,15 @@ transition: all .3s ease;
         .city-name { font-size: 24px; font-weight: bold; margin-bottom: 5px; }
         .city-subtitle { font-size: 14px; opacity: 0.9; }
         .dealers-count { margin-top: 10px; font-size: 13px; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 15px; display: inline-block; }
+        .dealer-popup-close:hover .dealer-popup-close i{
+            transform: rotate(90deg);
+        }
         
-        /* Tabs */
+    
         .dealer-tabs { display: flex; background: #f8f9fa; overflow-x: auto; }
         .dealer-tab { padding: 15px 20px; background: transparent; border: none; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; font-size: 14px; color: #666; min-width: 150px; }
         .dealer-tab.active { color: var(--primary-color); border-bottom-color: var(--primary-color); background: rgba(227,42,9,0.05); }
         
-        /* Content */
         .dealer-content { padding: 25px; max-height: 400px; overflow-y: auto; }
         .dealer-panel { display: none; }
         .dealer-panel.active { display: block; }
@@ -2029,6 +2031,7 @@ position: absolute;
         .article-title-sec{
             background-color: hsla(1, 77%, 37%, 0.815);
             padding: 10px 25px;
+            height: 61px;
         }
         .article-content {
             position: absolute;
@@ -2046,6 +2049,7 @@ position: absolute;
             /* margin-top: 9px; */
             margin-left:5px ;
             line-height: 1.5;
+            /* align-self: flex-start; */
             
         }
         .article-card:hover .article-content {
@@ -2068,7 +2072,7 @@ position: absolute;
         }
         
         .article-title {
-            font-size: 18px;
+            font-size:1em;
             font-weight: 700;
             color: #ffffff;
             /* margin-bottom: 5px; */
@@ -2701,3 +2705,47 @@ position: absolute;
             justify-content: center;
         }
  
+
+        .city-btn.active {
+            background: var(--third-color) !important;
+            color: #000 !important;
+            border-color: var(--third-color) !important;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 196, 0, 0.5);
+        }
+        
+        .dropdown {
+            background: transparent;
+            border: 1px solid white;
+            border-radius: 20px;
+            color: white;
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            appearance: none;
+            position: relative;
+            width: 150px;
+        }
+        
+        .dropdown option {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px;
+        }
+        
+        .dropdown:focus {
+            outline: 2px solid var(--third-color);
+            outline-offset: 2px;
+        }
+        
+        .filter-submit {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-submit:hover {
+            background: var(--third-color) !important;
+            color: #000 !important;
+            border-color: var(--third-color) !important;
+            transform: scale(1.05);
+        }
+        
