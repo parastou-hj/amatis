@@ -218,8 +218,47 @@
                                     </div>
                                 </div>
                             </div>
-                        <div class="user">
+                        <div class="user position-relative" id="userDropdown">
                             <img src="./images/user.png" alt="">
+                             <div class="user-menu">
+                                    <div class="user-header">
+                                        <div class="user-avatar">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <div class="user-info">
+                                            <div class="user-name">حساب کاربری</div>
+                                            <div class="user-subtitle">نام کاربر</div>
+                                        </div>
+                                    </div>
+
+                                    <a href="#" class="menu-item">
+                                        <i class="fa fa-user-pen"></i>
+                                        <span>ویرایش مشخصات فردی</span>
+                                    </a>
+
+                                    <div class="wallet-item">
+                                        <div class="wallet-info">
+                                            <i class="fa fa-wallet wallet-icon"></i>
+                                            <span>کیف پول</span>
+                                        </div>
+                                        <span class="wallet-amount">۰ تومان</span>
+                                    </div>
+
+                                    <a href="#" class="menu-item">
+                                        <i class="fa fa-heart"></i>
+                                        <span>لیست علاقه‌مندی</span>
+                                    </a>
+
+                                    <a href="#" class="menu-item">
+                                        <i class="fa fa-box"></i>
+                                        <span>سفارش‌های من</span>
+                                    </a>
+
+                                    <a href="#" class="menu-item logout">
+                                        <i class="fa fa-right-from-bracket"></i>
+                                        <span>خروج از حساب کاربری</span>
+                                    </a>
+                                </div>
                         </div>
                          <button class="mobile-menu-toggle" aria-label="Open menu">
     <i class="fa fa-bars"></i> 
@@ -467,96 +506,345 @@
         <section class="map-sec container-fluid position-relative px-0">
             
             <div class="row col-xl-11 px-0">
-                <div class="col-lg-4">
+                <div class="col-lg-4 d-flex flex-column align-items-start">
                       <div class="title-sec">
                         <h3>نمایندگی ها</h3>
                     </div>
+                      
+
+                    <div class="filters">
+                          <select class="dropdown">
+                            <option>نام شهر</option>
+                        </select>
+                        <select class="dropdown">
+                            <option>نمایندگی</option>
+                        </select>
+                      
+                    </div>
+
+                    <div class="city-list">
+                        <button class="city-btn active"
+                         data-city="تهران" 
+                             data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری">تهران</button>
+                        <button class="city-btn"
+                         data-city="قشم" 
+                             data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری">قشم</button>
+                        <button class="city-btn">مشهد</button>
+                        <button class="city-btn">شیراز</button>
+                        <button class="city-btn">گیلان</button>
+                        <button class="city-btn">اصفهان</button>
+                        <button class="city-btn">یزد</button>
+                        <button class="city-btn">همدان</button>
+                        <button class="city-btn">مازندران</button>
+                        <button class="city-btn">زنجان</button>
+                        <button class="city-btn">کیش</button>
+                        <button class="city-btn">تبریز</button>
+                    </div>
+                    
+
                 </div>
                  <div class="col-lg-8 map-container">
                          <img src="./images/map.png" alt="">
                          <div class="map-point sem" 
                             data-city="سمنان" 
-                            data-projects="15">
+                             data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+
+                            >
+                        </div>
+                          <div class="map-point mazandaran" 
+                            data-city="مازندران" 
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                          <div class="map-point teh" 
-                            data-city="کهک" 
-                            data-projects="15">
+                            data-city="تهران" 
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                         <div class="map-point zanjan" 
                             data-city="زنجان" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
+                         <div class="map-point gilan" 
+                            data-city=" گیلان" 
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
+                        </div>
+                           <div class="map-point qazvin" 
+                            data-city=" قزوین" 
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
+                        </div>
+                        
+                           
                         <div class="map-point kordestan" 
                             data-city="کردستان" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                          <div class="map-point razavi" 
-                            data-city=" رضوی" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                         <div class="map-point khorasan" 
                             data-city="خراسان جنوبی" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                          <div class="map-point yazd" 
                             data-city="یزد" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                          <div class="map-point esf" 
                             data-city="اصفهان" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                         <div class="map-point hamedan" 
                             data-city="همدان" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                           <div class="map-point lorestan" 
                             data-city="لرستان" 
-                            data-projects="15">
+                           data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                         <div class="map-point kermanshah" 
                             data-city="کرمانشاه" 
-                            data-projects="15">
+                           data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                          <div class="map-point khozestan" 
                             data-city="خوزستان" 
-                            data-projects="15">
+                           data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                          <div class="map-point booshehr" 
                             data-city="بوشهر" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
-                        <div class="map-point booshehr-2" 
-                            data-city="بوشهر" 
-                            data-projects="15">
-                        </div>
+                       
                         <div class="map-point fars" 
                             data-city="فارس" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                         <div class="map-point hormoz" 
                             data-city="هرمز" 
-                            data-projects="15">
+                           data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                           <div class="map-point chabahar" 
                             data-city="چابهار" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                          <div class="map-point pakistan" 
                             data-city="پاکستان" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                           <div class="map-point iraq" 
                             data-city="عراق" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                         <div class="map-point syria" 
                             data-city="سوریه" 
-                            data-projects="15">
+                            data-manager="آقای علیرضا گیلانی"
+                                data-address="رشت، خیابان امام خمینی، مجتمع پارس، طبقه ۳"
+                                data-phone="013-33445566"
+                                data-workhours="شنبه تا چهارشنبه: ۸:۰۰ الی ۱۷:۰۰"
+                                data-projects="۱"
+                                data-customers="۲۲۰+ مشتری"
+                            >
                         </div>
                        
                        
                     </div>
+                <div class="dealer-popup-overlay" id="dealerPopupOverlay">
+    <div class="dealer-popup">
+        <div class="dealer-popup-header">
+            <button class="dealer-popup-close" onclick="closeDealerPopup()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="city-name" id="popupCityName">نام شهر</div>
+            <div class="city-subtitle">نمایندگی رسمی آماتیس</div>
+        </div>
+        
+        <div class="dealer-popup-body">
+            <!-- اطلاعات نمایندگی -->
+            <div class="dealer-info-section">
+                <div class="section-title">
+                    <i class="fas fa-building"></i>
+                    اطلاعات نمایندگی
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-label">نام مسئول</div>
+                        <div class="info-value" id="popupManagerName">-</div>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-label">آدرس</div>
+                        <div class="info-value" id="popupAddress">-</div>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-label">شماره تماس</div>
+                        <div class="info-value" id="popupPhone">-</div>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <div class="info-label">ساعات کاری</div>
+                        <div class="info-value" id="popupWorkHours">-</div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            
+         
+        </div>
+    </div>
             </div>
         </section>
           <section class="articles-section mt-lg-5 mb-lg-3 my-2 py-5">
@@ -582,9 +870,9 @@
                             <img src="./images/blog1.png" alt="نکات مهم در خرید اتصالات لوله" class="article-image">
                         
                         <div class="article-content">
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center article-title-sec">
                                 <img src="./images/article-flesh.png" alt="">
-                            <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
+                            <h3 class="article-title">روشویی مناسب سرویس بهداشتی کوچک</h3>
                             </div>
                             <p class="article-excerpt">در هنگام خرید اتصالات لوله باید به نکات مهمی توجه شود که کیفیت و دوام محصول را تضمین کند...</p>
                             <!-- <div class="article-meta">
@@ -600,9 +888,9 @@
                             <img src="./images/blog2.png" alt="معرفی انواع اتصالات لوله" class="article-image">
                         
                         <div class="article-content">
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center article-title-sec">
                                 <img src="./images/article-flesh.png" alt="">
-                            <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
+                            <h3 class="article-title">راهنمای خرید آینه سرویس بهداشتی چراغ دار</h3>
                             </div>
                             <p class="article-excerpt">انواع مختلف اتصالات لوله در صنعت تصفیه آب کاربردهای متفاوتی دارند که در این مقاله به آنها می‌پردازیم...</p>
                             <!-- <div class="article-meta">
@@ -618,7 +906,7 @@
                             <img src="./images/blog3.png" alt="فیلتر ممبران تصفیه آب بلومن" class="article-image">
                         
                         <div class="article-content">
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center article-title-sec">
                                 <img src="./images/article-flesh.png" alt="">
                             <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
                             </div>
@@ -636,7 +924,7 @@
                         <img src="./images/blog4.png" alt="رسوب پساب فاضلاب بلومن" class="article-image">
                         
                         <div class="article-content">
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center article-title-sec">
                                 <img src="./images/article-flesh.png" alt="">
                             <h3 class="article-title">نکات مهم در خرید اتصالات لوله</h3>
                             </div>

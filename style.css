@@ -53,6 +53,14 @@
 ul{
     margin-bottom:0px !important
 }
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10005;
+    background-color: #fff;
+}
 .navbar{
     font-size: 1.2em;
 }
@@ -630,6 +638,176 @@ body.no-scroll {
 
 .header-last > img{
     /* width: 22px; */
+}
+
+.user-menu {
+    position: absolute;
+    top: 100%;
+    right: -50px;
+    width: 320px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 107, 53, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 9999;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.user:hover .user-menu,
+.user-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* فلش اشاره‌گر */
+.user-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 70px;
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    border-top: 1px solid rgba(255, 107, 53, 0.1);
+    border-right: 1px solid rgba(255, 107, 53, 0.1);
+    border-bottom: none;
+    border-left: none;
+    z-index: 10000;
+}
+
+
+.user-header {
+    display: flex;
+    background: linear-gradient(135deg, var(--primary-color), var(--blue));
+    color: #ffffff;
+    padding: 15px 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.user-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 107, 53, 0.1) 100%);
+    pointer-events: none;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-left: 10px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.user-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 12px;
+}
+
+/* آیتم‌های منو */
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.menu-item:hover {
+    background: rgba(255, 107, 53, 0.05);
+    color: var(--primary-color);
+}
+
+.menu-item i {
+    margin-left: 15px;
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.menu-item span {
+    font-size: 14px;
+}
+
+/* کیف پول */
+.wallet-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 107, 53, 0.03);
+}
+
+.wallet-info {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.wallet-amount {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.wallet-icon {
+    margin-left: 15px;
+    color: var(--secondary-color);
+    font-size: 18px;
+}
+
+/* دکمه خروج */
+.logout {
+    color: #333;
+    border-bottom: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.logout i {
+    color: #dc3545;
+}
+
+.logout:hover {
+    background: rgba(220, 53, 69, 0.05);
+}
+
+.logout:hover i {
+    color: #dc3545;
+}
+
+.logout:hover span {
+    color: #dc3545;
 }
  .cart {
     display: flex ;
@@ -1233,7 +1411,6 @@ transition: all .3s ease;
     border-radius: 2px;
 }
 
-/* نقطه کنار خط */
 .title-sec::before {
     content: '';
     position: absolute;
@@ -1245,8 +1422,273 @@ transition: all .3s ease;
     border-radius: 50%;
     transform: translateX(-50%);
 }
+  .title {
+            font-size: 24px;
+            margin-top: 30px;
+        }
+        .divider {
+            margin: 10px auto;
+            width: 40px;
+            height: 5px;
+            background: white;
+            border-radius: 10px;
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .dropdown {
+            background: transparent;
+            border: 1px solid white;
+            border-radius: 20px;
+            color: white;
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            appearance: none;
+            position: relative;
+            width: 150px;
+        }
+        .city-list {
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            justify-content: center;
+            gap: 10px;
+            /* margin-top: 10px; */
+        }
+        .city-btn {
+            border: 1px solid white;
+            border-radius: 20px;
+            padding: 8px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .city-btn:hover, .city-btn.active {
+            background: #ffcc00;
+            color: #000;
+        }
+        /* استایل‌های پاپ آپ نمایندگی */
+.dealer-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10006;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(3px);
+}
 
-/* برای صفحات موبایل */
+.dealer-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dealer-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.dealer-popup-overlay.active .dealer-popup {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.dealer-popup-header {
+    background: linear-gradient(135deg, var(--primary-color), #DC2626);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.dealer-popup-close {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.dealer-popup-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.dealer-popup .city-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.city-subtitle {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.dealer-popup-body {
+    padding: 30px;
+}
+
+.dealer-info-section {
+    margin-bottom: 25px;
+}
+
+.dealer-info-section:last-child {
+    margin-bottom: 0;
+}
+
+.dealer-popup .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-top: 2px;
+    min-width: 20px;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-label {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 2px;
+}
+
+.info-value {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.dealer-contact-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contact-btn.primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.contact-btn.primary:hover {
+    background: var(--blue);
+    transform: translateY(-2px);
+}
+
+.contact-btn.secondary {
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-btn.secondary:hover {
+    background: #e2e8f0;
+}
+
+.map-point {
+    cursor: pointer !important;
+    transition: all 0.3s ease;
+}
+
+.map-point.clicked {
+    animation: clickPulse 0.6s ease-out;
+}
+
+@keyframes clickPulse {
+    0% { transform: translate(-50%, -50%) scale(1.3); }
+    50% { transform: translate(-50%, -50%) scale(1.8); }
+    100% { transform: translate(-50%, -50%) scale(1.3); }
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .dealer-popup {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .dealer-popup-header {
+        padding: 20px;
+    }
+
+    .dealer-popup-body {
+        padding: 20px;
+    }
+
+    .dealer-popup .city-name {
+        font-size: 20px;
+    }
+
+    .dealer-contact-buttons {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 768px) {
     .title-sec h3 {
         font-size: 1.5rem;
@@ -1273,9 +1715,8 @@ transition: all .3s ease;
     display: block; */
 }
 
-/* نقطه پروژه */
 .map-point {
-   
+   position: absolute;
     width: 12px;
     height: 12px;
     background: #FFA500;
@@ -1284,10 +1725,10 @@ transition: all .3s ease;
    transform: translate(-50%, -50%);
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3);
+  scale: 0.8;
 }
 
 
-/* هاله داخلی */
 .map-point::before {
     content: '';
     position: absolute;
@@ -1302,7 +1743,6 @@ transition: all .3s ease;
     animation: pulse-inner 2s infinite ease-in-out;
 }
 
-/* هاله خارجی */
 .map-point::after {
     content: '';
     position: absolute;
@@ -1317,7 +1757,6 @@ transition: all .3s ease;
     animation: pulse-outer 3s infinite ease-in-out;
 }
 
-/* انیمیشن‌ها */
 @keyframes pulse-inner {
     0% { width: 16px; height: 16px; opacity: 0.8; }
     50% { width: 28px; height: 28px; opacity: 0.4; }
@@ -1330,13 +1769,27 @@ transition: all .3s ease;
     100% { width: 28px; height: 28px; opacity: 0.4; }
 }
 
-/* افکت hover */
 .map-point:hover {
     background: #FF8C00;
     transform: translate(-50%, -50%) scale(1.3);
     box-shadow: 0 4px 12px rgba(255, 140, 0, 0.5);
 }
+  .map-point.active {
+            opacity: 1;
+            visibility: visible;
+            scale: 1.5;
+            animation: pointPulse 2s infinite ease-in-out;
+            background: #ff3c00;
+        }
+.map-point.active::before {
+    border-color: #FF8C00;
+    animation-duration: 1s;
+}
 
+.map-point.active::after {
+    border-color: #FF8C00;
+    animation-duration: 1.5s;
+}
 .map-point:hover::before {
     border-color: #FF8C00;
     animation-duration: 1s;
@@ -1347,28 +1800,31 @@ transition: all .3s ease;
     animation-duration: 1.5s;
 }
 
-/* استایل tooltip */
 .point-tooltip {
-    position: absolute;
+   position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
     background: #333;
     color: white;
-    padding: 12px 16px;
-    border-radius: 8px;
-    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
     white-space: nowrap;
-    z-index: 1000;
+    z-index: 10;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     pointer-events: none;
+    width: max-content;
+    max-width: 150px; 
 }
 
 .point-tooltip.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    /* transform: translateY(0); */
 }
 
 .point-tooltip::after {
@@ -1402,6 +1858,36 @@ transition: all .3s ease;
     position: absolute;
   top:26%;
   right: 62%;
+}
+.gilan{
+    position: absolute;
+  top:24%;
+  right: 58%;
+}
+.mazandaran{
+     position: absolute;
+  top:28%;
+  right: 52%;
+}
+.qazvin{
+      position: absolute;
+  top:28%;
+  right: 58%;
+}
+.ardabil{
+    position: absolute;
+  top:18%;
+  right: 62%;
+}
+.east-azarbayjan{
+    position: absolute;
+  top:20%;
+  right: 68%;
+}
+.west-azarbayjan{
+    position: absolute;
+  top:22%;
+  right: 71%;
 }
 .hamedan{
     position: absolute;
@@ -1551,17 +2037,13 @@ position: absolute;
         }
         
         .btn-label {
-            /* position: absolute;
-            left: 60px;
-            top: 50%;
-            transform: translateY(-50%); */
+            
             white-space: nowrap;
             font-size: 14px;
-            /* color: #ffffff; */
+           
             font-weight: 500;
         }
         .articles-section{
-            /* background-image: url(./images/blog-back.png); */
         }
         .article-card {
             position: relative;
@@ -1569,7 +2051,7 @@ position: absolute;
             /* border-radius: 15px; */
             cursor: pointer;
             transition: all 0.4s ease;
-            height: 260px;
+            height: 310px;
             margin: 0 10px;
             /* opacity: 0.6; */
             transform: scale(0.95);
@@ -1577,7 +2059,7 @@ position: absolute;
         
         .owl-item.center .article-card {
             opacity: 1;
-            transform: scale(1);
+            /* transform: scale(1); */
         }
         
         .owl-item.center .article-card:hover {
@@ -1591,7 +2073,7 @@ position: absolute;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+            /* background: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.8) 100%); */
             z-index: 2;
             transition: all 0.4s ease;
         }
@@ -1606,7 +2088,7 @@ position: absolute;
         }
         
         .article-card:hover::before {
-            background: linear-gradient(to bottom, rgba(9, 132, 227, 0.7) 0%, rgba(0, 0, 0, 0.8) 100%);
+            background: linear-gradient(to bottom, rgba(227, 42, 9, 0.658) 0%, rgba(0, 0, 0, 0.8) 100%);
         }
         
         .article-image {
@@ -1626,20 +2108,24 @@ position: absolute;
         .articles-section .section-title{
             color: var(--primary-color);
         }
+        .article-title-sec{
+            background-color: hsla(1, 77%, 37%, 0.815);
+            padding: 10px 25px;
+        }
         .article-content {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            padding:5px 25px;
+            /* padding:5px 25px; */
             z-index: 3;
-            transform: translateY(0);
+            transform: translateY(15px);
             transition: transform 0.4s ease;
         }
         
         .article-content img{
             width: 10px !important;
-            margin-top: 9px;
+            /* margin-top: 9px; */
             margin-left:5px ;
             line-height: 1.5;
             
@@ -1667,7 +2153,7 @@ position: absolute;
             font-size: 18px;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 5px;
+            /* margin-bottom: 5px; */
             line-height: 1.5;
             transition: all 0.3s ease;
         }
@@ -1686,6 +2172,7 @@ position: absolute;
             transition: all 0.4s ease;
             max-height: 0;
             overflow: hidden;
+            padding: 0px 25px;
         }
         
         .article-card:hover .article-excerpt {
