@@ -457,24 +457,34 @@ body.no-scroll {
 .sidebar-header{
     display: none !important;
 }
+.header-last{
+    width: 100%;
+}
 
-/* --- استایل‌های موبایل با Media Query --- */
 @media (max-width: 991px) {
+    .header-last{
+        justify-content: stretch;
+        width: 30%;
+    }
     .megamenu-list{
         max-height: 300px;
         overflow-y: auto;
     }
     .mobile-menu-toggle {
-        display: block; /* در موبایل نمایش داده می‌شود */
+        display: block; 
     }
 
-    /* هدر داخل سایدبار */
     .sidebar-header {
         display: flex !important;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 20px;
+        padding: 15px 25px 15px 5px;
         border-bottom: 1px solid #eaeaea;
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    .megamenu-container{
+        margin-top: 0px;
     }
     .sidebar-title {
         font-weight: 600;
@@ -486,7 +496,7 @@ body.no-scroll {
         font-size: 28px;
         cursor: pointer;
         padding: 0 5px;
-        color: #555;
+        color: #fff;
     }
 
     /* تبدیل نوبار اصلی به سایدبار */
@@ -595,7 +605,7 @@ body.no-scroll {
 
     /* استایل آیتم‌های دسته‌بندی */
     .megamenu-list.categories-list .category-item a {
-        padding: 12px 35px;
+        padding: 12px 25px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1289,6 +1299,25 @@ body.no-scroll {
     flex-direction: column;
     align-items: center;
 }
+.product-image img:nth-child(2){
+    opacity: 0;
+    visibility: hidden;
+       transition: all .3s ease;
+}
+.product-image .pro-img{
+    transform: translateY(0);
+    transition: transform .3s ease;
+
+}
+.product-item:hover .product-image .pro-img{
+    transform: translateY(-5px);
+    transition: transform .3s ease;
+}
+.product-item:hover .product-image img:nth-child(2){
+  opacity: 1;
+  visibility: visible;
+    transition: all .3s ease;
+}
 .pro-img{
     width: auto !important;
     max-width: 100% !important;
@@ -1464,7 +1493,7 @@ transition: all .3s ease;
             background: #ffcc00;
             color: #000;
         }
-        /* استایل‌های پاپ آپ نمایندگی */
+       
 
  .dealer-popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10006; display: none; align-items: center; justify-content: center; }
         .dealer-popup { background: white; border-radius: 20px; max-width: 600px; width: 90%; max-height: 90vh; overflow: hidden; }
@@ -1497,14 +1526,10 @@ transition: all .3s ease;
         .contact-btn.primary { background: var(--primary-color); color: white; }
         .contact-btn.secondary { background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
         
-        /* Navigation */
-        .dealer-navigation { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; padding: 0 10px; display: flex; justify-content: space-between; pointer-events: none; }
-        .nav-arrow { width: 40px; height: 40px; background: var(--primary-color); color: white; border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; pointer-events: auto; opacity: 0.8; }
-        .nav-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
+        
 
-        /* استایل برای highlight کردن نقاط روی نقشه */
 .map-point.highlighted {
-    background: hsl(51.39deg 98.39% 51.37%) !important; /* رنگ زرد */
+    background: hsl(51.39deg 98.39% 51.37%) !important;
     transform: translate(-50%, -50%) scale(1.8);
     z-index: 100;
     animation: highlightPulse 1s infinite ease-in-out;
@@ -2490,6 +2515,16 @@ position: absolute;
         }
         
         @media (max-width: 991px) {
+            .megamenu-container .container{
+                padding-right: 0px !important;
+                padding-left: 0px !important;
+            }
+            .has-submenu::after, .has-megamenu::after {
+  
+                    left: 5px;
+                    top: 28px;
+                    
+                }
             .footer-content {
                 gap: 30px;
             }
@@ -2559,6 +2594,9 @@ position: absolute;
                 font-size: 20px;
                 width: 45px;
                 height: 45px;
+            }
+            .header-last{
+                width: 50%;
             }
         }
 

@@ -479,17 +479,7 @@ function createPanels() {
                     <div class="info-value">${dealer.hours}</div>
                 </div>
             </div>
-            
-            <div class="dealer-stats">
-                <div class="stat-item">
-                    <span class="stat-number">${dealer.projects}</span>
-                    <div class="stat-label">پروژه فعال</div>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">${dealer.customers}</span>
-                    <div class="stat-label">مشتری</div>
-                </div>
-            </div>
+        
             
             <div class="contact-buttons">
                 <button class="contact-btn primary" onclick="callDealer('${dealer.phone}')">
